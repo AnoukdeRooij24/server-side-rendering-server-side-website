@@ -2,17 +2,16 @@
 
 <h1>Oncollaboration</h1>
 
-<h2>Categories</h2>
-    <ul>
-        {% for category in categories %}
-            <li>{{ category.name }}</li>
-        {% endfor %}
-    </ul>
+<input type="text" placeholder="Search...">
+<ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
 
 <h2>Webinars</h2>
 {% for webinar in webinars %}
-    <article class="webinar-item">
-
+    <article>
         <img src="https://fdnd-agency.directus.app/assets/{{ webinar.thumbnail }}" width="150" height="100"
             style="object-fit: cover" />
         <p>{{ webinar.title }}</p>
@@ -25,7 +24,7 @@
         <p> {{ categories.avl_categories_id.name }}</p>
         {% endfor %}
     </article>
-    {% endfor %}
+{% endfor %}
 
 
 {% render 'partials/foot.liquid' %}

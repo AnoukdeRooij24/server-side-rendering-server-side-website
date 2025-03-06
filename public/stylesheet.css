@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* COLORS */
+main {
+  background-color: #F0E5E9;
+}
+
+header, footer {
+  background-color: #6B0025;
+}
+
+ul li {
+  list-style: none;
+}
+
