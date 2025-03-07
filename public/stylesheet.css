@@ -13,6 +13,10 @@ header, footer {
   background-color: #6B0025;
 }
 
+.light-text {
+  color: white;
+}
+
 ul li {
   list-style: none;
 }
