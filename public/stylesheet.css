@@ -4,18 +4,82 @@
     padding: 0;
   }
 
+  /* FONT FACE */
+@font-face {
+  font-family: "Lato";
+  src: url(/fonts/Lato/Lato-Regular.ttf) format('truetype');
+}
+
+
+body {
+
+  /* FONTS */
+  --font: ;
+  
   /* COLORS */
+  --primary-color: hsl(339, 100%, 21%);
+  --background-color: hsl(338, 27%, 92%);
+  --background-category-color: hsl(339, 26%, 76%);
+  --hover-state-color: hsl(339, 26%, 80%);
+  --accent-color-1: hsl(340, 100%, 15%);
+
+  /* TEXT COLORS */
+  --light-text: #ffff;
+  --text-color: #0000;
+
+  /* TEXT SIZES */
+  --font-size-xs: 0.5rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.5rem;
+
+  /* PADDING */
+  --padding-button: 8px 16px;
+  --padding-label: 4px;
+
+  /* BORDER RADIUS */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-nav: 3px solid var(--primary-color);
+}
+
+
+/* FONTS */
+h1 {
+  font-weight: 800;
+  font-size: var(--font-size-2xl);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-weight: 400;
+  font-size: var(--font-size-lg);
+}
+
+p {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+}
+
+/*  */
 main {
-  background-color: #F0E5E9;
+  background-color: var(--background-color);
 }
 
 header, footer {
-  background-color: #6B0025;
+  background-color: var(--primary-color);
 }
 
-.light-text {
-  color: white;
-}
 
 ul li {
   list-style: none;
