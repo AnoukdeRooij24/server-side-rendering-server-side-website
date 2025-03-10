@@ -1,3 +1,31 @@
+/* HEADER STYLING */
+header {
+    height: 5em;
+    width: 100%;
+    position: relative;
+
+
+}
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2%;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    a {
+        text-decoration: none;
+        margin: 1em;
+    }
+}
+
+
 /* INDEX STYLING*/
 .search-bar {
     position: relative;
@@ -34,11 +62,13 @@
     font-size: var(--font-size-lg);
     font-weight: 400;
     border: none;
+    border-radius: var(--border-radius-sm);
     padding: 0 200px 0 30px;
     background-color: #fff;
   }
 
 .category-list {
+    display:contents;
     .category-element {
         background-color: var(--background-category-color);
         margin: .5em ;
@@ -109,3 +139,7 @@ max-width: 23em;
 
 /* WEBINAR DETAIL STYLING */
 
+video {
+    width: 90%;
+    margin: 1em;
+}

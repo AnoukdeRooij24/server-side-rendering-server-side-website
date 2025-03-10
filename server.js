@@ -51,7 +51,7 @@ app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map
    console.log(speakersResponseJSON)
    // Geef hier eventueel data aan mee
-  console.log(webinarsResponseJSON.data[0].categories, 'hoi');
+  console.log(webinarsResponseJSON.data[0].categories);
   console.log(`${apiEndpoint}${apiWebinars}`)
 
 

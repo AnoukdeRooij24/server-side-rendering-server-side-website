@@ -83,13 +83,10 @@ a {
   color: inherit;
 }
 
-
-
 header, footer {
   background-color: var(--primary-color);
   color: var(--light-text);
 }
-
 
 ul li {
   font-family: "Lato", 'Courier New', Courier, monospace;
