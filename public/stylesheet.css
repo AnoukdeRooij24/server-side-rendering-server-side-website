@@ -72,6 +72,11 @@ p {
   font-weight: 400;
 }
 
+a {
+  font-family: "Lato", 'Courier New', Courier, monospace;
+  color: inherit;
+}
+
 /*  */
 main {
   background-color: var(--background-color);
@@ -79,22 +84,13 @@ main {
 
 header, footer {
   background-color: var(--primary-color);
+  color: var(--light-text);
 }
 
 
 ul li {
   font-family: "Lato", 'Courier New', Courier, monospace;
   list-style: none;
+  max-width: fit-content;
 }
 
-
-
-/* STYLING UIT DE STYLE.CSS - KOPPELT NIET */
-.category-list {
-  .category-element {
-      background-color: var(--background-category-color);
-      margin: .5em ;
-      padding: var(--padding-button);
-      border-radius: var(--border-radius-sm);
-  }
-}

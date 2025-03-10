@@ -13,6 +13,7 @@ const apiContourings = "contourings"
 const apiSpeakers = "speakers"
 const apiUsers = "users"
 const apiWebinars = "webinars"
+const webinarFields = '?fields=title,thumbnail,date,categories.*.*,speakers.*.*'
 
 // Doe een fetch naar de data die je nodig hebt
 const categoriesResponse = await fetch(`${apiEndpoint}${apiCategories}`)
@@ -20,7 +21,7 @@ const commentsResponse = await fetch(`${apiEndpoint}${apiComments}`)
 const contouringsResponse = await fetch(`${apiEndpoint}${apiContourings}`)
 const speakersResponse = await fetch(`${apiEndpoint}${apiSpeakers}`)
 const usersResponse = await fetch(`${apiEndpoint}${apiUsers}`)
-const webinarsResponse = await fetch(`${apiEndpoint}${apiWebinars}`)
+const webinarsResponse = await fetch(`${apiEndpoint}${apiWebinars}${webinarFields}`)
 
 // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
 const categoriesResponseJSON = await categoriesResponse.json()
@@ -48,7 +49,12 @@ app.set('views', './views')
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map
+   console.log(speakersResponseJSON)
    // Geef hier eventueel data aan mee
+  console.log(webinarsResponseJSON.data[0].categories, 'hoi');
+  console.log(`${apiEndpoint}${apiWebinars}`)
+
+
    response.render('index.liquid', {
     categories: categoriesResponseJSON.data, 
     comments: commentsResponseJSON.data, 
@@ -61,7 +67,6 @@ app.get('/', async function (request, response) {
 app.get('/webinar-detail.liquid', async function (request, response) {
   response.render('webinar-detail.liquid')
 })
-
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt

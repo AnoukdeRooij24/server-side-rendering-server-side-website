@@ -1,10 +1,11 @@
 {% render 'partials/head.liquid' %}
 
-<h1>{{ webinar.title }}</h1>
+{% comment %} {% for webinar in webinars %} {% endcomment %}
 
-    <video controls width="250">
-        <source src="https://fdnd-agency.directus.app/assets/{{ webinar.video }}" />
-    </video>
+    <h1>webinar</h1>
+
+    <video controls width="250"> <source src="https://fdnd-agency.directus.app/assets/{{ webinar.video }}" /> </video>
+    <h2>{{ webinar.title }}</h2>
 
     <div>
         {% for category in webinar.categories %}
@@ -23,13 +24,14 @@
 
     </div>
 
-<h2>Q & A</h2>
-<h3>Ask a question</h3>
-<h3>Comments</h3>
+    <h2>Q & A</h2>
+    <h3>Ask a question</h3>
+    <h3>Comments</h3>
 
-<h2>The speaker</h2>
-    {% for speaker in webinar.speakers %}
-        <p class="speakers">{{ speaker.avl_categories_id.name }}</p>
-    {% endfor %}
+    <h2>The speaker</h2>
+        {% for speaker in webinar.speakers %}
+            <p class="speakers">{{ speaker.avl_categories_id.name }}</p>
+        {% endfor %}
 
+{% comment %} {% endfor %} {% endcomment %}
 {% render 'partials/foot.liquid' %}
