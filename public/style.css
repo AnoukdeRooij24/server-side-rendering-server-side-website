@@ -1,24 +1,62 @@
 /* INDEX STYLING*/
+.search-bar {
+    position: relative;
+    border-color: var(--accent-color-1);
+    height: 40px;
+    max-width: fit-content;
+    width: 800%;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    .button {
+        right: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        border: none;
+        padding: var(--padding-button);
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        transform: translateY(-50%);
+      }
+}
+
+  .search-bar input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    border: none;
+    padding: 0 200px 0 30px;
+    background-color: #fff;
+  }
 
 .category-list {
     .category-element {
         background-color: var(--background-category-color);
         margin: .5em ;
-        padding: var(--padding-button);
+        padding: var(--padding-label);
         border-radius: var(--border-radius-sm);
+        text-transform: capitalize;
     }
   }
   
 .webinars-container {
 padding: 2rem;
-/* display: grid; */
+display: grid;
 gap: 30px;
 }
 
 .webinar-item{
-/* display: grid; */
+display: grid;
 align-items: center;
-margin: .5em ;
 padding: var(--padding-button);
 border-radius: var(--border-radius-md);
 max-width: 23em;
@@ -32,28 +70,39 @@ max-width: 23em;
 
     .title-webinar {
         font-size: var(--font-size-lg);
+        margin: .4em;
+
     }
 
+    .speaker-webinar {
+        font-size: var(--font-size-md);
+        color: var(--accent-color-1);
+        text-transform: uppercase;
+        margin: .4em;
+
+    }
+    
+    .date-webinar {
+        color: var(--hover-state-color);
+        margin: .4em;
+
+    }
+    
+    .category-label {
+    background-color: var(--primary-color);
+    padding: var(--padding-label);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    color: var(--light-text);
+    max-width: fit-content;
+    text-transform: capitalize;
+    margin: .4em;
+
+    }
 
 }
 
-.speaker-webinar {
-    font-size: var(--font-size-lg);
-    height: 3rem;
-    color: var(--accent-color-1)
-}
 
-.date-webinar {
-    color: var(--hover-state-color);
-}
-
-
-.category-label {
-background-color: var(--accent-color-1);
-border: none;
-border-radius: var(--border-radius-sm);
-color: var(--light-text);
-}
 
 
 

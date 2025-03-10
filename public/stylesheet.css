@@ -11,6 +11,9 @@
 }
 
 body {
+  background-color: var(--background-color);
+  min-height: 100vh;
+
   /* FONTS */
   --font: ;
   
@@ -39,7 +42,7 @@ body {
 
   /* PADDING */
   --padding-button: 8px 16px;
-  --padding-label: 4px;
+  --padding-label: 6px;
 
   /* BORDER RADIUS */
   --border-radius-sm: 6px;
@@ -52,18 +55,21 @@ h1 {
   font-family: "Lato", 'Courier New', Courier, monospace;
   font-weight: 800;
   font-size: var(--font-size-2xl);
+  margin: .7em;
 }
 
 h2 {
   font-family: "Lato", 'Courier New', Courier, monospace;
   font-weight: 600;
   font-size: var(--font-size-xl);
+  margin: .7em;
 }
 
 h3 {
   font-family: "Lato", 'Courier New', Courier, monospace;
   font-weight: 400;
   font-size: var(--font-size-lg);
+  margin: .7em;
 }
 
 p {
@@ -77,10 +83,7 @@ a {
   color: inherit;
 }
 
-/*  */
-main {
-  background-color: var(--background-color);
-}
+
 
 header, footer {
   background-color: var(--primary-color);
