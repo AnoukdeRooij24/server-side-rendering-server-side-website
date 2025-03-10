@@ -1,0 +1,16 @@
+/* INDEX STYLING*/
+
+.category-list {
+    .category-element {
+        background-color: var(--background-category-color);
+        margin: .5em ;
+        padding: var(--padding-label);
+        border-radius: var(--border-radius-sm);
+    }
+}
+
+.tumbnail {
+    width: 150;
+    height: 100;
+    object-fit: cover;
+}

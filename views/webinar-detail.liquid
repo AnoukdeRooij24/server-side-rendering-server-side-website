@@ -28,5 +28,8 @@
 <h3>Comments</h3>
 
 <h2>The speaker</h2>
+    {% for speaker in webinar.speakers %}
+        <p class="speakers">{{ speaker.avl_categories_id.name }}</p>
+    {% endfor %}
 
 {% render 'partials/foot.liquid' %}

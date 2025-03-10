@@ -3,26 +3,32 @@
 <h1>Oncollaboration</h1>
 
 <input type="text" placeholder="Search...">
-<ul>
+<ul class="category-list">
     {% for category in categories %}
-        <li>{{ category.name }}</li>
+        <li class="category-element">{{ category.name }}</li>
     {% endfor %}
 </ul>
 
 <h2>Webinars</h2>
 {% for webinar in webinars %}
     <article>
-        <img src="https://fdnd-agency.directus.app/assets/{{ webinar.thumbnail }}" width="150" height="100"
-            style="object-fit: cover" />
-        <p>{{ webinar.title }}</p>
+        <section>
+            <img class="tumbnail" src="https://fdnd-agency.directus.app/assets/{{ webinar.thumbnail }}" width="150" height="100"
+                style="object-fit: cover" />
+            <p>{{ webinar.title }}</p>
+        </section>
 
-        {% for speaker in webinar.speakers %}
-        <p> {{ speaker.avl_speakers_id.fullname }}</p>
-        {% endfor %}
+        <section>
+            {% for speaker in webinar.speakers %}
+            <p> {{ speaker.avl_speakers_id.fullname }}</p>
+            {% endfor %}
+        </section>
 
-        {% for categories in webinar.categories %}
-        <p> {{ categories.avl_categories_id.name }}</p>
-        {% endfor %}
+        <section>
+            {% for categories in webinar.categories %}
+            <p> {{ categories.avl_categories_id.name }}</p>
+            {% endfor %}
+        </section>
     </article>
 {% endfor %}
 

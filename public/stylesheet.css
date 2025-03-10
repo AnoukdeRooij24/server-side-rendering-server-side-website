@@ -10,9 +10,7 @@
   src: url(/fonts/Lato/Lato-Regular.ttf) format('truetype');
 }
 
-
 body {
-
   /* FONTS */
   --font: ;
   
@@ -51,21 +49,25 @@ body {
 
 /* FONTS */
 h1 {
+  font-family: "Lato", 'Courier New', Courier, monospace;
   font-weight: 800;
   font-size: var(--font-size-2xl);
 }
 
 h2 {
+  font-family: "Lato", 'Courier New', Courier, monospace;
   font-weight: 600;
   font-size: var(--font-size-xl);
 }
 
 h3 {
+  font-family: "Lato", 'Courier New', Courier, monospace;
   font-weight: 400;
   font-size: var(--font-size-lg);
 }
 
 p {
+  font-family: "Lato", 'Courier New', Courier, monospace;
   font-size: var(--font-size-md);
   font-weight: 400;
 }
@@ -81,6 +83,18 @@ header, footer {
 
 
 ul li {
+  font-family: "Lato", 'Courier New', Courier, monospace;
   list-style: none;
 }
 
+
+
+/* STYLING UIT DE STYLE.CSS - KOPPELT NIET */
+.category-list {
+  .category-element {
+      background-color: var(--background-category-color);
+      margin: .5em ;
+      padding: var(--padding-button);
+      border-radius: var(--border-radius-sm);
+  }
+}
