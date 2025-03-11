@@ -1,15 +1,15 @@
-/* HEADER STYLING */
+/*      MARK: HEADER     */
 header {
     height: 8em;
     width: 100%;
     position: relative;
-}
 
-header .logo {
-    position: absolute;
-    top: 20%;
-    transform: translateY(-20%);
-    margin-left: 2%;
+    .logoH {
+        position: absolute;
+        top: 20%;
+        transform: translateY(-20%);
+        margin-left: 2%;
+    }
 }
 
 nav {
@@ -17,6 +17,7 @@ nav {
     top: 75%;
     transform: translateY(-75%);
     right: 5%;
+
     a {
         text-decoration: none;
         margin: .7em;
@@ -24,7 +25,36 @@ nav {
 }
 
 
-/* INDEX STYLING*/
+
+
+/*      MARK: FOOTER     */
+footer {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 1rem 0rem;
+    width: 100%;
+
+    .footer-AVL {
+        margin: .8em;
+    }
+    
+    .footer-list {
+        margin: .8em;
+    }
+
+    .logoF {
+        bottom: 10%;
+        right: 2%;
+    }
+}
+
+
+
+
+
+/*      MARK: INDEX     */
+
 .search-bar {
     position: relative;
     border-color: var(--accent-color-1);
@@ -68,6 +98,7 @@ nav {
 .category-list {
     display: flex;
     flex-wrap: wrap;
+
     .category-element {
         background-color: var(--background-category-color);
         margin: .5em ;
@@ -131,14 +162,31 @@ max-width: 23em;
 
 }
 
-/* TABLET FORMAAT */
+
+
+
+
+/*      MARK: DETAIL WEBINAR     */
+
+
+video {
+    width: 90%;
+    margin: 1em;
+}
+
+
+
+
+
+/*      MARK: MEDIA T     */
+
 @media (min-width: 770px) {
 
     header {
         height: 5em;
     }
 
-    header .logo {
+    header .logoH {
         top: 50%;
         transform: translateY(-50%);
     }
@@ -162,9 +210,16 @@ max-width: 23em;
     .webinars-container {
         grid-template-columns: 1fr 1fr;
     }
+
+    footer {
+        align-items: center;
+        justify-content: space-between;
+    }
+
 }
 
-/* DESKTOP FORMAAT */
+/*      MARK: MEDIA D     */
+
 @media (min-width: 1024px) {
 
     .webinars-container {
@@ -174,13 +229,3 @@ max-width: 23em;
 
 }
 
-
-
-
-
-/* WEBINAR DETAIL STYLING */
-
-video {
-    width: 90%;
-    margin: 1em;
-}
