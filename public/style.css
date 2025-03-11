@@ -1,27 +1,25 @@
 /* HEADER STYLING */
 header {
-    height: 5em;
+    height: 8em;
     width: 100%;
     position: relative;
-
-
 }
 
 header .logo {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20%;
+    transform: translateY(-20%);
     margin-left: 2%;
 }
 
 nav {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 75%;
+    transform: translateY(-75%);
     right: 5%;
     a {
         text-decoration: none;
-        margin: 1em;
+        margin: .7em;
     }
 }
 
@@ -55,20 +53,21 @@ nav {
       }
 }
 
-  .search-bar input {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    font-size: var(--font-size-lg);
-    font-weight: 400;
-    border: none;
-    border-radius: var(--border-radius-sm);
-    padding: 0 200px 0 30px;
-    background-color: #fff;
-  }
+    .search-bar input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        font-size: var(--font-size-lg);
+        font-weight: 400;
+        border: none;
+        border-radius: var(--border-radius-sm);
+        padding: 0 100px 0 10px;
+        background-color: #fff;
+    }
 
 .category-list {
-    display:contents;
+    display: flex;
+    flex-wrap: wrap;
     .category-element {
         background-color: var(--background-category-color);
         margin: .5em ;
@@ -81,6 +80,7 @@ nav {
 .webinars-container {
 padding: 2rem;
 display: grid;
+grid-template-columns: 1fr;
 gap: 30px;
 }
 
@@ -127,11 +127,52 @@ max-width: 23em;
     max-width: fit-content;
     text-transform: capitalize;
     margin: .4em;
-
     }
 
 }
 
+/* TABLET FORMAAT */
+@media (min-width: 770px) {
+
+    header {
+        height: 5em;
+    }
+
+    header .logo {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .search-bar {
+        max-width:700px;
+        width: 1000%;
+        justify-self: center;
+        height: 50px;
+    }
+
+    .category-list {
+        justify-content: center;
+    }
+
+    .webinars-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* DESKTOP FORMAAT */
+@media (min-width: 1024px) {
+
+    .webinars-container {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+}
 
 
 
