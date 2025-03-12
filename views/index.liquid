@@ -16,9 +16,10 @@
 </section>
 
 <h2>Webinars</h2>
-{% for webinar in webinars %}
 
     <section class="webinar-container">
+    {% for webinar in webinars %}
+
         <article class="webinar-item">
 
             {% comment %} TUMBNAIL {% endcomment %}
@@ -28,7 +29,7 @@
             <p class="title-webinar">{{ webinar.title }}</p>
 
             {% comment %} SPEAKER {% endcomment %}
-            {% for speaker in webinar.speakers %}
+             {% for speaker in webinar.speakers %}
                 <p class="speaker-webinar"> {{ speaker.avl_speakers_id.fullname }}</p>
             {% endfor %}
 
@@ -41,9 +42,10 @@
             {% endfor %}
 
         </article>
+
+    {% endfor %}
     </section>
 
-{% endfor %}
 
 
 {% render 'partials/foot.liquid' %}

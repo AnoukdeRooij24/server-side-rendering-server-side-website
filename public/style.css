@@ -1,3 +1,15 @@
+/*      TESTEN WAAROM DE BODY TE WIJD IS ONDER 36em */
+/*      RODE RANDJES LATEN JE MAKKELIJK ZIEN WAAR ER IETS UITSTEEKT     */
+/* 
+        *, *::before, *::after {
+            border:solid 1px red;
+        } 
+        */
+
+
+
+
+
 /*      MARK: HEADER     */
 header {
     height: 8em;
@@ -32,13 +44,14 @@ footer {
     align-items: center;
     justify-content: space-between;
     display: flex;
+    flex-direction: column;
     padding: 1rem 0rem;
     width: 100%;
 
     .footer-AVL {
         margin: .8em;
     }
-    
+
     .footer-list {
         margin: .8em;
     }
@@ -46,8 +59,13 @@ footer {
     .logoF {
         bottom: 10%;
         right: 2%;
+        margin-right: 2%;
     }
-}
+
+    @media (width > 36em) {
+        flex-direction: row;
+    }
+} 
 
 
 
@@ -80,20 +98,20 @@ footer {
         top: 50%;
         right: 1%;
         transform: translateY(-50%);
-      }
+    }
 }
 
-    .search-bar input {
-        height: 100%;
-        width: 100%;
-        outline: none;
-        font-size: var(--font-size-lg);
-        font-weight: 400;
-        border: none;
-        border-radius: var(--border-radius-sm);
-        padding: 0 100px 0 10px;
-        background-color: #fff;
-    }
+.search-bar input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0 100px 0 10px;
+    background-color: #fff;
+}
 
 .category-list {
     display: flex;
@@ -101,38 +119,32 @@ footer {
 
     .category-element {
         background-color: var(--background-category-color);
-        margin: .5em ;
+        margin: .5em;
         padding: var(--padding-label);
         border-radius: var(--border-radius-sm);
         text-transform: capitalize;
     }
-  }
-  
-.webinars-container {
-padding: 2rem;
-display: grid;
-grid-template-columns: 1fr;
-gap: 30px;
 }
 
-.webinar-item{
-display: grid;
-align-items: center;
-padding: var(--padding-button);
-border-radius: var(--border-radius-md);
-max-width: 23em;
+.webinar-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(16em, 100%), 1fr));
+    gap: 1.5rem;
+    padding: clamp(1rem, 5vw, 2rem);
+    gap:clamp(1rem, 5vw, 2rem);
+}
+
+.webinar-item {
+    border-radius: var(--border-radius-md);
 
     .tumbnail-webinar {
         width: 100%;
-        height: 100%;
-        object-fit: contain;
         border-radius: var(--border-radius-md);
     }
 
     .title-webinar {
         font-size: var(--font-size-lg);
         margin: .4em;
-
     }
 
     .speaker-webinar {
@@ -140,24 +152,22 @@ max-width: 23em;
         color: var(--accent-color-1);
         text-transform: uppercase;
         margin: .4em;
-
     }
-    
+
     .date-webinar {
         color: var(--hover-state-color);
         margin: .4em;
-
     }
-    
+
     .category-label {
-    background-color: var(--primary-color);
-    padding: var(--padding-label);
-    border: none;
-    border-radius: var(--border-radius-sm);
-    color: var(--light-text);
-    max-width: fit-content;
-    text-transform: capitalize;
-    margin: .4em;
+        background-color: var(--primary-color);
+        padding: var(--padding-label);
+        border: none;
+        border-radius: var(--border-radius-sm);
+        color: var(--light-text);
+        max-width: fit-content;
+        text-transform: capitalize;
+        margin: .4em;
     }
 
 }
@@ -197,7 +207,7 @@ video {
     }
 
     .search-bar {
-        max-width:700px;
+        max-width: 700px;
         width: 1000%;
         justify-self: center;
         height: 50px;
@@ -218,14 +228,16 @@ video {
 
 }
 
+
+
+
+
 /*      MARK: MEDIA D     */
 
 @media (min-width: 1024px) {
 
     .webinars-container {
         grid-template-columns: 1fr 1fr 1fr;
-
     }
 
 }
-
