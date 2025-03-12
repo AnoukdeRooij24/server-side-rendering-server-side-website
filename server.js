@@ -66,6 +66,7 @@ app.get('/', async function (request, response) {
 
 app.get('/webinar-detail.liquid', async function (request, response) {
   response.render('webinar-detail.liquid')
+
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
