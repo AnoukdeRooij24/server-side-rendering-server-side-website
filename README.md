@@ -15,8 +15,7 @@ Hier is mijn ontwerp van [Oncollaboration](https://server-side-rendering-server-
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
+  <!--* [Gebruik](#gebruik)--> <!-- * [Kenmerken](#kenmerken)-->
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
@@ -30,10 +29,12 @@ Oncollaboration is een online platform waar informatie tussen Indoneschische en 
 ### Mijn werk
 Ik ben aan de slag gegaan met de webinar overzicht pagina. Hierop heb ik vooral de focus gelegt dat de site makkelijk begaanbaar is op mobiel, aangezien dat het meest gebruikt wordt in Indonesië. De webinar data wordt opgehaald uit de database en is hierdoor altijd up to date. 
 
-## Gebruik
+
+
+<!-- ## Gebruik -->
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
-## Kenmerken
+<!-- ## Kenmerken -->
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
 ## Installatie
@@ -41,8 +42,8 @@ Ik ben aan de slag gegaan met de webinar overzicht pagina. Hierop heb ik vooral 
 
 Dit project is gemaakt in NodeJS. Daarom is het belangrijk dat dit eerst geinstaleerd is, daarna kunt u het project openen in de code-editor.
 - Voer in de terminal npm install uit om alle bijbehorende onderdelen te installeren.
-- Voer vervolgens npm start uit om de server te starten.
-- In de browser kan je het project te bekijken op http://localhost:8000 .
+- Voer npm start uit om de server te starten.
+- In de browser kan je het project bekijken op http://localhost:8000 .
 
 ## Bronnen
 [Search bar](https://www.codingnepalweb.com/search-bar-html-css-javascript/)
